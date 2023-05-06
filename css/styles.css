@@ -186,7 +186,7 @@ img {
     transition: color var(--animation);
 }
 .nav-title.current {
-    color: #404bbf;
+    color: var(--color-ocean);
 }
 .nav-title.current::after {
     content: "";
