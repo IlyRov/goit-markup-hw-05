@@ -18,6 +18,7 @@ user agent stylesheet header {
 }
 
 :root {
+    --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --iteam: 3;
     --column: 24px;
     --primary-font: "Roboto", sans-serif;
@@ -146,11 +147,11 @@ img {
 }
 .link {
     text-decoration: none;
+    transition: color var(--animation);
 }
 .link:hover,
 .link:focus {
     color: #404bbf;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-logo {
     color: #2e2f42;
@@ -238,11 +239,11 @@ img {
     background-color: #4d5ae5;
     border-radius: 4px;
     margin-top: 48px;
+    transition: background-color var(--animation);
 }
 .hero-button:hover,
 .hero-button:focus {
     background-color: #404BBF;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section-two {
     margin: 0 auto;
@@ -354,11 +355,11 @@ img {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--animation);
 }
 .social-logo:hover,
 .social-logo:focus {
     background-color: #404bbf;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .name {
@@ -412,20 +413,20 @@ img {
     align-items: center;
     justify-content: center;
     color: #8e8f99;
+    transition: border-color var(--animation), color var(--animation);
 }
 .customer-link:hover,
 .customer-link:focus {
     border-color: #404bbf;
     color: #404bbf;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link-svg{
     fill: currentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-link-svg:hover
 .customer-link-svg:focus {
     fill: #404bbf;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bottom {
     background-color: #2e2f42;
@@ -480,11 +481,11 @@ img {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    transition: background-color var(--animation);
 }
 .footer-social-media-link:hover,
 .footer-social-media-link:focus {
     background-color: #31d0aa;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-svg{
     fill: #f4f4fd;
@@ -522,6 +523,7 @@ img {
     padding: 12px 24px;
     border: 1px solid #e7e9fc;
     border-radius: 4px;
+    transition: color var(--animation), background-color var(--animation), border var(--animation), box-shadow var(--animation);
 }
 .project-type:hover,
 .project-type:focus {
@@ -531,7 +533,6 @@ img {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
         0px 2px 1px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .concept-list {
     display: flex;
@@ -544,13 +545,13 @@ img {
 }
 .concept-link{
     display: block;
+    font-size: 20px;
+    color: var(--headings-color);
+    transition: box-shadow var(--animation);
 }
 .concept-link:hover,
 .concept-link:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .category {
     padding: 32px 16px;
@@ -613,23 +614,24 @@ img {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
     box-sizing: border-box;
     margin-left: 360px;
     margin-top: 20px;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color var(--animation), fill var(--animation);
 }
 .close:hover,
-.close:focus .close-svg{
+.close:focus {
     background-color: #404bbf;
     fill: #E7E9FC;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.close-svg{
-    margin-top: auto;
 }
 .overlay-relative{
     position: relative;
@@ -637,6 +639,7 @@ img {
     overflow: hidden;
 }
 .overlay {
+    overflow: hidden;
     height: 100%;
     position: absolute;
     bottom: 0;
@@ -646,7 +649,7 @@ img {
     color: #fff;
     padding: 20px;
     transform: translateY(100%);
-    transition: transform 1.5s ease;
+    transition: transform var(--animation);
 }
 .overlay-relative:hover .overlay{
     transform: translateY(0);
