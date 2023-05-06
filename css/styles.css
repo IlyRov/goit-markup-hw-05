@@ -183,6 +183,10 @@ img {
     letter-spacing: 0.02em;
     color: #2e2f42;
     padding: 24px 0;
+    transition: color var(--animation);
+}
+.nav-title.current {
+    color: var(--color-ocean);
 }
 .nav-title.current::after {
     content: "";
@@ -651,6 +655,6 @@ img {
     transform: translateY(100%);
     transition: transform var(--animation);
 }
-.overlay-relative:hover .overlay{
+.concept-link:hover .overlay{
     transform: translateY(0);
 }
