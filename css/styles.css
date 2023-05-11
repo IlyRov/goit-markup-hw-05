@@ -630,6 +630,18 @@ img {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    box-sizing: border-box;
+    margin-left: 360px;
+    margin-top: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color var(--animation), fill var(--animation);
 }
 .close:hover,
