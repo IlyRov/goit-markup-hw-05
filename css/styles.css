@@ -152,6 +152,7 @@ img {
 .link:hover,
 .link:focus {
     color: #404bbf;
+    transform: translateY(0%);
 }
 .header-logo {
     color: #2e2f42;
@@ -662,10 +663,6 @@ img {
     position: relative;
     width: 100%;
     overflow: hidden;
-}
-.overlay-relative:hover,
-.overlay-relative:focus{
-    transform: translateY(0%);
 }
 .overlay {
     overflow: hidden;
